@@ -10970,7 +10970,7 @@ a.text-dark:focus {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: aqua;
   height: 100px;
