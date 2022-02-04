@@ -23,10 +23,10 @@ class GuestController extends Controller
         return view('pages.login');
     }
 
-    public function homeUser() {
+    public function post() {
 
         $posts = Post::all();
 
-        return view('pages.homeUser', compact('posts'));
+        return view('pages.posts', compact('posts'));
     }
 }
