@@ -18,6 +18,16 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: aqua;
+
+    .utente {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            margin-right: 10px;
+        }
+    }
 }
 
 footer {

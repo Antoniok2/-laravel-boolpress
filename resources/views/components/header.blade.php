@@ -1,8 +1,8 @@
 <header>
-    <h1>Piazza's Blog</h1>
+    <h2>Piazza's Blog</h2>
     <div class="utente">
         @auth
-            <h1>Benvenuto {{ Auth::user() -> name }}</h1>
+            <h2>Hello {{ Auth::user() -> name }}</h2>
             <a class="btn btn-primary" href="{{ route('logout') }}">LOGOUT</a>
         @else
             <h5>

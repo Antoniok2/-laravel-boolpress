@@ -10975,6 +10975,16 @@ header {
   background-color: aqua;
 }
 
+header .utente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .utente h2 {
+  margin-right: 10px;
+}
+
 footer {
   display: flex;
   justify-content: center;
