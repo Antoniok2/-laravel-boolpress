@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Post;
+
 class GuestController extends Controller
 {
-    public function home() {
+    public function homeGuest() {
 
-        return view('pages.home');
+        return view('pages.homeGuest');
     }
 
     public function registration() {
@@ -19,5 +21,12 @@ class GuestController extends Controller
     public function accesso() {
 
         return view('pages.login');
+    }
+
+    public function homeUser() {
+
+        $posts = Post::all();
+
+        return view('pages.homeUser', compact('posts'));
     }
 }

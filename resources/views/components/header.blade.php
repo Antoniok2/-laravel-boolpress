@@ -1,5 +1,5 @@
 <header>
-    <h1>MENU</h1>
+    <h1>Piazza's Blog</h1>
     <div class="utente">
         @auth
             <h1>Benvenuto {{ Auth::user() -> name }}</h1>
