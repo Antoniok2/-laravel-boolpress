@@ -1,5 +1,5 @@
 <footer>
     <h3>
-        Ciao da Footer
+        Made with &hearts;
     </h3>
 </footer>
