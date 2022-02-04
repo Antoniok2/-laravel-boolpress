@@ -10991,3 +10991,7 @@ h2 {
   text-align: center;
 }
 
+.contenitore li {
+  list-style: none;
+}
+

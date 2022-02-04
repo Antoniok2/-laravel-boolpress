@@ -1,6 +1,8 @@
 @extends('layouts.main-layout')
 @section('content')
 
+    <example-component></example-component>
+
     <div class="contenitore">
         <h1>Listato Post</h1>
         <ul>
