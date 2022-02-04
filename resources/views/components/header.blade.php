@@ -1,4 +1,5 @@
 <header>
+    
     <h2>BoOlPrEsS Blog</h2>
     <div class="utente">
         @auth
