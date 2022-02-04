@@ -10969,6 +10969,7 @@ a.text-dark:focus {
 }
 
 header {
+  height: 5vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -10985,7 +10986,12 @@ header .utente h2 {
   margin-right: 10px;
 }
 
+header .utente a {
+  color: black;
+}
+
 footer {
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10997,8 +11003,12 @@ h2 {
 }
 
 .contenitore {
-  margin: 25px;
+  height: 90vh;
   text-align: center;
+}
+
+.contenitore h1 {
+  text-decoration: underline;
 }
 
 .contenitore li {
