@@ -1,20 +1,26 @@
 @extends('layouts.main-layout')
 @section('content')
 
-    <h2>Effettua Login</h2>
+    <div class="contenitore">
+        <div class="login_registr_create">
+            <h2>Effettua Login</h2>
 
-    <form action="{{ route('login') }}" method="POST">
+            <form action="{{ route('login') }}" method="POST">
+        
+                @method('POST')
+                @csrf
+        
+                <label for="email">E-mail</label><br>
+                <input type="text" name="email" placeholder="Inserisci email"> <br>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" placeholder="Inserisci password"> <br>
+                <br>
+                <input class="btn btn-primary" type="submit" value="LOGIN">
+        
+            </form>
+        </div>
 
-        @method('POST')
-        @csrf
+    </div>
 
-        <label for="email">E-mail</label>
-        <input type="text" name="email"> <br>
-        <label for="password">Password</label>
-        <input type="password" name="password"> <br>
-        <br>
-        <input class="btn btn-primary" type="submit" value="LOGIN">
-
-    </form>
 
 @endsection

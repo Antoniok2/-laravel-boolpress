@@ -4,19 +4,21 @@
     @auth
         <div class="contenitore">
             <h1>Listato Post</h1>
-            <ul>
+            <span><a href="{{ route('create') }}">Crea nuovo post</a></span>
+            <div class="posts">
                 @foreach ($posts as $post)
-                    <li>
-                        Titolo: {{ $post -> title }} - Autore: {{ $post -> author }}
-                    </li>
+                    <div class="post">
+                        <h4>{{ $post -> title }}</h4>
+                        <h5>{{ $post -> author }}</h5>
+                        <span>{{ $post -> date }}</span>
+                        <p>{{ $post -> description }}</p>
+                    </div>
                 @endforeach
-            </ul>
+            </div>
         </div>
     @else
         <h5>
-            Per vedere i contenuti effettua l'accesso o registrati
-            <a href="{{ route('registration') }}">Registrati</a> |
-            <a href="{{ route('login') }}">Effettua l'accesso</a>
+            Per vedere i contenuti <a href="{{ route('login') }}">Effettua l'accesso</a> o <a href="{{ route('registration') }}">Registrati!</a>
         </h5>
     @endauth
 @endsection

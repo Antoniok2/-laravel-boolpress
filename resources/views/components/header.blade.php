@@ -1,7 +1,12 @@
 <header>
-    
-    <h2>BoOlPrEsS Blog</h2>
-    <div class="utente">
+
+    <div class="menu_sx">
+        <img src="{{ asset('/storage/assets/img/menu.png')}}" alt="logo_menu">
+        <h2>BoOlPrEsS Blog</h2>
+    </div>
+
+
+    <div class="auth_reg">
         @auth
             <h2>Hello {{ Auth::user() -> name }}</h2>
             <a class="btn btn-primary" href="{{ route('logout') }}">LOGOUT</a>
