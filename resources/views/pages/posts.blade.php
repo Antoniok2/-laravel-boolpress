@@ -12,6 +12,7 @@
                         <h5>{{ $post -> author }}</h5>
                         <span>{{ $post -> date }}</span>
                         <p>{{ $post -> description }}</p>
+                        <h6>{{ $post ->category->name }}</h6>
                     </div>
                 @endforeach
             </div>
