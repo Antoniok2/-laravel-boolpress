@@ -11062,3 +11062,14 @@ footer {
   margin: 2%;
 }
 
+.without-access {
+  height: 88vh;
+  text-align: center;
+  background-image: url("/storage/assets/img/background-image.jpg");
+  color: white;
+}
+
+.without-access a {
+  color: white;
+}
+

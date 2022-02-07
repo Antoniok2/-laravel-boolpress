@@ -17,8 +17,11 @@
             </div>
         </div>
     @else
-        <h5>
-            Per vedere i contenuti <a href="{{ route('login') }}">Effettua l'accesso</a> o <a href="{{ route('registration') }}">Registrati!</a>
-        </h5>
+        <div class="without-access">
+            <h5>
+                Per vedere i contenuti <a href="{{ route('login') }}">Effettua l'accesso</a> o <a href="{{ route('registration') }}">Registrati!</a>
+            </h5>
+        </div>
+
     @endauth
 @endsection
