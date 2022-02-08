@@ -14,10 +14,10 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        factory(Post::class, 20) -> make() ->each(function ($post){
+        factory(Post::class, 20) -> make() -> each(function($post){
             $category = Category::inRandomOrder() -> limit(1) -> first();
             $post -> category() -> associate($category);
-            $post -> save(); 
-         });
+            $post -> save();
+        });
     }
 }
