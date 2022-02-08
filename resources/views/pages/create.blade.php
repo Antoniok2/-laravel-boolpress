@@ -19,6 +19,12 @@
                     <input type="text" name="description" placeholder="Inserisci testo"><br>
                     <label for="date">Inserisci la data</label><br>
                     <input type="date" name="date"><br><br>
+                    <label for="category">Categoria</label>
+                    <select name="category">
+                        @foreach ($categories as $category)
+                            <option value="{{ $category -> id }}">{{ $category -> name }}</option>
+                        @endforeach
+                    </select><br><br>
                     <input type="submit" value="Crea">
             
                 </form>
