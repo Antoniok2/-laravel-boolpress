@@ -21,12 +21,9 @@ class CreatePostsTable extends Migration
             $table -> text('description');
             $table -> date('date');
 
+            $table-> BigInteger('category_id')->unsigned();
 
             $table -> timestamps();
-
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
-
         });
     }
 
