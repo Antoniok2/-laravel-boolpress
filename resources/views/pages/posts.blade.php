@@ -12,7 +12,13 @@
                         <h5>{{ $post -> author }}</h5>
                         <span>{{ $post -> date }}</span>
                         <p>{{ $post -> description }}</p>
-                        <h6>Categoria: {{ $post -> category-> name }}</h6>
+                        <h6>Categoria: {{ $post -> category -> name }}</h6>
+                        <h6>Reazione:
+                            @foreach ($post -> reactions as $reaction)
+                                {{ $reaction -> name }}
+                            @endforeach 
+                        </h6>
+
                     </div>
                 @endforeach
             </div>
