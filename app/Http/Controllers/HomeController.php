@@ -55,6 +55,15 @@ class HomeController extends Controller
         $posts -> save();
           
         return redirect() -> route('posts');
+    }
 
+    public function edit($id) {
+
+        $categories = Category::all();
+        $reactions = Reaction::all();
+
+        $post = findOrFail($id);
+
+        return view('pages.edit', compact('categories', 'reactions', 'post'));
     }
 }

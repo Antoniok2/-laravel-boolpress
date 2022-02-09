@@ -7,7 +7,9 @@
             <span><a href="{{ route('create') }}">Crea nuovo post</a></span>
             <div class="posts">
                 @foreach ($posts as $post)
+                    
                     <div class="post">
+                        <h5><a href="{{ route('edit', $post -> id ) }}">Modifica Post</a></h5>
                         <h4>{{ $post -> title }}</h4>
                         <h5>{{ $post -> author }}</h5>
                         <span>{{ $post -> date }}</span>
@@ -18,7 +20,6 @@
                                 {{ $reaction -> name }}
                             @endforeach 
                         </h6>
-
                     </div>
                 @endforeach
             </div>
