@@ -10,6 +10,7 @@
                     
                     <div class="post">
                         <h5><a href="{{ route('edit', $post -> id ) }}">Modifica Post</a></h5>
+                        <h5><a href="{{ route('delete', $post -> id) }}">Elimina post</a></h5>
                         <h4>{{ $post -> title }}</h4>
                         <h5>{{ $post -> author }}</h5>
                         <span>{{ $post -> date }}</span>
