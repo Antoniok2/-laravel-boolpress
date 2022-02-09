@@ -11061,6 +11061,14 @@ footer {
   margin: 2%;
 }
 
+.posts .post h6 {
+  border: 1px solid black;
+}
+
+.posts .post h6 a {
+  color: white;
+}
+
 .without-access {
   height: 88vh;
   text-align: center;

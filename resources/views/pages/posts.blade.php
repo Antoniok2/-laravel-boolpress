@@ -9,8 +9,8 @@
                 @foreach ($posts as $post)
                     
                     <div class="post">
-                        <h5><a href="{{ route('edit', $post -> id ) }}">Modifica Post</a></h5>
-                        <h5><a href="{{ route('delete', $post -> id) }}">Elimina post</a></h5>
+                        <h6><a href="{{ route('edit', $post -> id ) }}">Modifica Post</a></h6>
+                        <h6><a href="{{ route('delete', $post -> id) }}">Elimina post</a></h6>
                         <h4>{{ $post -> title }}</h4>
                         <h5>{{ $post -> author }}</h5>
                         <span>{{ $post -> date }}</span>
