@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 use App\Category;
+use App\Reaction;
 
 class HomeController extends Controller
 {
@@ -29,8 +30,9 @@ class HomeController extends Controller
     public function create() {
 
         $categories = Category::all();
+        $reactions = Reaction::all();
 
-        return view('pages.create', compact('categories'));
+        return view('pages.create', compact('categories', 'reactions'));
     }
 
     public function store(Request $request) {
@@ -43,12 +45,15 @@ class HomeController extends Controller
         ]);
 
         $posts = Post::make($data);
+
         $category = Category::findOrFail($request -> get('category'));
-
         $posts -> category() -> associate($category);
-
         $posts -> save();
-        
+
+        $reactions = Reaction::findOrFail($request -> get('reactions'));
+        $posts -> reactions() -> attach($reactions);
+        $posts -> save();
+          
         return redirect() -> route('posts');
 
     }
