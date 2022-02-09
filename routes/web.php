@@ -19,6 +19,7 @@ Route::get('/logout', 'Auth\LoginController@logout') ->name('logout');
 Route::get('/posts', 'HomeController@posts') -> name('posts');
 Route::get('/posts/create', 'HomeController@create') -> name('create');
 Route::get('/posts/edit/{id}', 'HomeController@edit') -> name('edit');
+Route::post('/posts/update/{id}', 'HomeController@update') ->name('update');
 
 
 Route::post('/register', 'Auth\RegisterController@register') ->name('register');

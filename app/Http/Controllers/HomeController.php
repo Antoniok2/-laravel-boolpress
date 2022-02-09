@@ -62,8 +62,31 @@ class HomeController extends Controller
         $categories = Category::all();
         $reactions = Reaction::all();
 
-        $post = findOrFail($id);
+        $post = Post::findOrFail($id);
 
         return view('pages.edit', compact('categories', 'reactions', 'post'));
+    }
+
+    public function update(Request $request, $id) {
+
+        $data = $request -> validate([
+            'title' => 'required|string|max:255',
+            'author' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+            'date' => 'required|date',
+        ]);
+
+        $post = Post::findOrFail($id);
+        $post -> update($data);
+
+        $category = Category::findOrFail($request -> get('category'));
+        $post -> category() -> associate($category);
+        $post -> save();
+
+        $reactions = Reaction::findOrFail($request -> get('reactions'));
+        $post -> reactions() -> sync($reactions);
+        $post -> save();
+
+        return redirect() -> route('posts');
     }
 }
